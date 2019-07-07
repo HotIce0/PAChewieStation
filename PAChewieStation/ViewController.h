@@ -8,8 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+#import "GCDAsyncSocket.h"
 
+@interface ViewController : NSViewController <GCDAsyncSocketDelegate>
+@property (weak) IBOutlet NSLevelIndicator *discreteLevelIndicatorConnectionStatus;
+@property (weak) IBOutlet NSTextField *textFieldAddr;
+@property (weak) IBOutlet NSTextField *textFieldPort;
+@property (weak) IBOutlet NSButton *btnConnect;
+- (IBAction)btnReadConfig:(id)sender;
+- (IBAction)btnSaveConfig:(id)sender;
 
+@property (readonly) GCDAsyncSocket *socket;
 @end
 
