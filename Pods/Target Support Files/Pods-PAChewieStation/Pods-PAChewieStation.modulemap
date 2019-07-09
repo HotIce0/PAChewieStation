@@ -1,0 +1,6 @@
+framework module Pods_PAChewieStation {
+  umbrella header "Pods-PAChewieStation-umbrella.h"
+
+  export *
+  module * { export * }
+}
